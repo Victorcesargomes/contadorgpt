@@ -9,7 +9,6 @@ import calendar
 import locale
 from babel.dates import format_date
 
-from app import *
 
 from dash import callback_context
 
