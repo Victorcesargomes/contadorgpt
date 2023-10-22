@@ -5,7 +5,6 @@ import pandas as pd
 from dotenv import load_dotenv
 import openai
 import os
-from app import *
 load_dotenv()
 from dash_bootstrap_templates import ThemeSwitchAIO
 
