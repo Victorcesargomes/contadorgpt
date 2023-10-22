@@ -2,10 +2,10 @@ from dash import html, dcc, Input, Output, State
 import dash_bootstrap_components as dbc
 import pandas as pd
 
-from dotenv import load_dotenv
+
 import openai
 import os
-load_dotenv()
+
 from dash_bootstrap_templates import ThemeSwitchAIO
 
 
@@ -15,8 +15,9 @@ url_theme1 = dbc.themes.FLATLY
 url_theme2 = dbc.themes.VAPOR
 
 
-# Carregue a chave da API da OpenAI das variáveis de ambiente
-openai.api_key = os.getenv("OPENAI_API_KEY")
+# Carregue a chave da API da OpenAI diretamente das variáveis de ambiente
+openai.api_key = os.environ.get("OPENAI_API_KEY")
+
 
 try:
     df_historico_msgs = pd.read_csv('historical_msgs.csv', index_col=0)
