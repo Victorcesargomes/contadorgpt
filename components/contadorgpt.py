@@ -1,6 +1,7 @@
 from dash import html, dcc, Input, Output, State
 import dash_bootstrap_components as dbc
 import pandas as pd
+from app import app
 
 
 import openai
